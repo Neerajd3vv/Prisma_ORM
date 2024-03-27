@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 
 logs
@@ -170,3 +171,8 @@ dist
 
 .dev.vars
 .wrangler/
+=======
+node_modules
+# Keep environment variables out of version control
+.env
+>>>>>>> c00b8567d9b5c0fc280e9159b2c542ee40f8a532

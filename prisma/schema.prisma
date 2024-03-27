@@ -11,6 +11,7 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+<<<<<<< HEAD
   directUrl =  env("DIRECT_DATABASE_URL")
 }
 
@@ -19,4 +20,22 @@ model log{
   level String
   message String
   meta Json
+=======
+}
+
+model User{
+  id Int @id @default(autoincrement())
+  firstName String 
+  lastName String ?
+  email String @unique
+  password String
+}
+
+model Todo {
+  id Int @id @default(autoincrement())
+  userId Int
+  title String @unique
+  description String ?
+  completed Boolean @default(false)
+>>>>>>> c00b8567d9b5c0fc280e9159b2c542ee40f8a532
 }
